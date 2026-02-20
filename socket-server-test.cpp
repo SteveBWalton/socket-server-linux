@@ -53,7 +53,8 @@ int main
         socklen_t clientLength = sizeof(clientAddress);
         char clientName[128];
         int clientSocket = accept(serverSocket, (struct sockaddr*)&clientAddress, &clientLength);
-        std::cout << "Connection from " << inet_ntop(AF_INET, &clientAddress.sin_addr, clientName, sizeof(clientName)) << std::endl;
+        inet_ntop(AF_INET, &clientAddress.sin_addr, clientName, sizeof(clientName));
+        std::cout << "Connection from " << clientName << std::endl;
 
         // Receiving data.
         char buffer[1024] = { 0 };

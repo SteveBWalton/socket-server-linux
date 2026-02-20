@@ -1,0 +1,11 @@
+#
+# Specify folders to ignore.
+#
+bin/
+obj/
+
+#
+# Specify files to ignore.
+#
+local-readme.txt
+
